@@ -17,7 +17,7 @@ public class CbookAppApplication {
 	@Scheduled(cron = "0 */5 * ? * *")
 	public void greet() {
 		RestTemplate restTemplate = new RestTemplate();
-		String message = restTemplate.getForObject("http://localhost:8081/api/contact/hello", String.class);
+		String message = restTemplate.getForObject("https://cbook-app.onrender.com/api/contact/hello", String.class);
 		System.out.println(message);
 	}
 
