@@ -60,4 +60,9 @@ public class ContactController {
             return ResponseEntity.ok(contacts);
         }
 
+        @GetMapping("/hello")
+        public String hello(){
+            return "Hello from Spring Boot";
+        }
+
 }
