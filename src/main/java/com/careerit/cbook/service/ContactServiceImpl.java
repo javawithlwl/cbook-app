@@ -42,7 +42,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public boolean deleteContact(long cid) {
+    public boolean deleteContact(UUID cid) {
 
         for (Contact c : contacts) {
             if (c.getCid().equals(cid)) {
@@ -57,7 +57,7 @@ public class ContactServiceImpl implements ContactService {
     }
 
     @Override
-    public Contact getContact(long cid) {
+    public Contact getContact(UUID cid) {
         for (Contact c : contacts) {
             if (c.getCid().equals(cid)) {
                 return c;
